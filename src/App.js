@@ -4,6 +4,7 @@ import MyButton from "./components/MyButton";
 import Counter from "./components/Counter";
 import ViewBoxesWithColorAndText from "./components/ViewBoxesWithColorAndText";
 import EventButton from "./components/EventButton";
+import EventInput from "./components/EventInput";
 
 const App = () => {
     return (
@@ -32,8 +33,15 @@ const App = () => {
         //     <Counter />
         //     <ViewBoxesWithColorAndText />
         // </View>
-        <View>
+        <View style={{
+                    flex: 1,
+                    backgroundColor: "#fff",
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}>
             <EventButton/>
+            <EventInput/>
+    
         </View>
     );
 };
