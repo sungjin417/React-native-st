@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, Button } from "react-native";
 import MyButton from "./components/MyButton";
+import Counter from "./components/Counter";
+
 const App = () => {
     return (
         <View
@@ -23,7 +25,9 @@ const App = () => {
             <MyButton title="Button"/>
             <MyButton>Child Button</MyButton>
             <MyButton />
-            <MyButton title={123}/>
+            {/* <MyButton title={123}/> */} 
+            {/* 실행은 되지만 오류가 발생  */}
+            <Counter />
         </View>
     );
 };

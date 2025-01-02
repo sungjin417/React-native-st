@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text} from 'react-native';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const MyButton = ({title = "default", ...props}) => {
     // props.title = 'xxx';
@@ -13,7 +13,7 @@ const MyButton = ({title = "default", ...props}) => {
                 margin: 10,
                 borderRadius: 8,
             }}
-            onPress={() => alert("Click!!")}>
+            onPress={() => props.onPress()}>
             
             <Text style={{fontSize: 24}}>
                 {props.children || title}</Text>
@@ -25,7 +25,7 @@ const MyButton = ({title = "default", ...props}) => {
 //     title: 'Btn',
 // };
 MyButton.propTypes = {
-    title: propTypes.string,
+    title: PropTypes.string,
 };
 
 export default MyButton;
